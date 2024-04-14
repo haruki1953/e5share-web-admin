@@ -5,5 +5,6 @@ const pinia = createPinia()
 pinia.use(persist)
 
 export default pinia
-// export * from './modules/user'
-// export * from './modules/counter'
+export * from './modules/auth'
+export * from './modules/admin'
+export * from './modules/users'

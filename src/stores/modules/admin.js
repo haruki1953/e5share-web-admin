@@ -6,7 +6,7 @@ export const useAdminStore = defineStore(
   'e5admin-admin',
   () => {
     const username = ref('')
-    const couldRegister = ref(null)
+    const couldRegister = ref(true)
     // 请求获取分享信息
     const getAdminInfo = async () => {
       const res = await adminGetInfoService()

@@ -18,22 +18,7 @@ const formModel = ref({
   repassword: ''
 })
 
-const rules = {
-  ...userRules,
-  repassword: [
-    {
-      validator: (rule, value, callback) => {
-        // 判断 value 和 当前 form 中收集的 password 是否一致
-        if (value !== formModel.value.password) {
-          callback(new Error('两次输入密码不一致'))
-        } else {
-          callback() // 就算校验成功，也需要callback
-        }
-      },
-      trigger: 'blur'
-    }
-  ]
-}
+const rules = userRules
 
 const authStore = useAuthStore()
 const router = useRouter()
